@@ -1,0 +1,24 @@
+
+body {
+  font: 300 rem(17px)/1.64 "Helvetica Neue";
+  letter-spacing: 0.4px;
+  background-color: #faf8f8;
+}
+
+.container {
+  max-width: rem(1180px);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content_title {
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #608b30;
+  font-family: "Bebas Neue Bold";
+  font-size: rem(48px);
+  font-weight: 400;
+  text-transform: uppercase;
+}

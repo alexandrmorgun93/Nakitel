@@ -1,0 +1,38 @@
+.door_section {
+  width: 100%;
+  position: relative;
+  margin-top: -11%;
+  z-index: 1;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    .door {
+      max-width: rem(160px);
+      width: 100%;
+      text-align: center;
+      img {
+        max-width: rem(128px);
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: .4s;
+        &:hover {
+          transition: .4s;
+          transform: scale(1.1);
+        }
+      }
+      p {
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        color: #608b30;
+        font-family: "Bebas Neue Bold";
+        font-size: rem(63px);
+        font-weight: 400;
+        line-height: 0.5;
+        span {
+          font-size: rem(23px);
+        }
+      }
+    }
+  }
+}
