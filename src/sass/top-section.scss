@@ -13,6 +13,7 @@
       display: flex;
       justify-content: space-between;
       .left_elem {
+        position: relative;
         max-width: rem(200px);
         width: 100%;
         display: flex;
@@ -31,11 +32,11 @@
             }
           }
           .entrance_elem1 {
-            font-size: rem(15px);
+            font-size: rem(16px);
             margin-bottom: rem(10px);
           }
           .entrance_elem2 {
-            font-size: rem(11px);
+            font-size: rem(13px);
           }
         }
         .social {
@@ -44,20 +45,44 @@
           margin-bottom: rem(10px);
           display: flex;
           justify-content: space-between;
-          .social_item {
-            position: relative;
-            width: rem(32px);
-            height: rem(32px);
-            img {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              &:hover {
-                transition: .3s;
-                transform: scale(1.5);
-              }
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            width: rem(29px);
+            height: rem(30px);
+            color: #ffffff;
+            box-shadow: 0 1px 3px rgba(17, 17, 14, 0.5);
+            border-radius: rem(3px);
+            transition: .4s;
+            &:hover {
+              transform: scale(1.2);
+              transition: .4s;
             }
+          }
+          .icon-twitter {
+            background-color: #44ccf6;
+          }
+          .icon-vk {
+            align-items: center;
+            background-color: #1665a6;
+            position: relative;
+            &::before {
+              position: relative;
+              left: rem(-2px);
+            }
+
+          }
+          .icon-facebook {
+            background-color: #3b5998;
+          }
+          .icon-rss {
+            background-color: #f08702;
+          }
+          .icon-gplus {
+            background-color: #d1402e;
           }
         }
         .left_basket {
@@ -66,7 +91,11 @@
           box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29);
           background-color: #de3635;
           background-image: linear-gradient(to top, rgba(176, 39, 39, 0.54) 0%, rgba(222, 54, 53, 0.54) 100%);
-          padding: rem(7px) rem(17px);
+
+          .icon-basket {
+            color: #ffffff;
+            font-size: rem(45px);
+          }
           .basket_elem {
             margin-left: rem(25px);
 
@@ -79,7 +108,7 @@
             }
             p {
               font-size: rem(12px);
-              font-weight: 300;
+              font-weight: 400;
               line-height: 1.14;
               color: #ffffff;
             }
@@ -107,41 +136,10 @@
       }
       .right_elem {
         position: relative;
+        left: rem(-10px);
         width: 100%;
-        max-width: rem(200px);
+        max-width: rem(220px);
         color: #ffffff;
-        .hot_line {
-          text-shadow: 0 1px 1px rgba(1, 1, 1, 0.5);
-          font-size: rem(18px);
-          font-weight: 300;
-          line-height: 1.53;
-        }
-        .telephone {
-          font-size: rem(23px);
-          font-weight: 500;
-          line-height: 1.13;
-        }
-        .call {
-          max-width: rem(200px);
-          width: 100%;
-          box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29);
-          background-color: #de3635;
-          background-image: linear-gradient(to top, rgba(176, 39, 39, 0.54) 0%, rgba(222, 54, 53, 0.54) 100%);
-          text-align: center;
-          padding: rem(5px) 0;
-          a {
-            width: 100%;
-            max-width: rem(170px);
-            font-size: rem(37px);
-            font-weight: 700;
-            line-height: 0.64;
-            text-transform: uppercase;
-            text-align: center;
-            span {
-              font-size: rem(26px);
-            }
-          }
-        }
 
       }
     }

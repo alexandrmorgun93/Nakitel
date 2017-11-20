@@ -149,7 +149,24 @@ module.exports = __webpack_require__(2);
     }
 
     menuNav(btn, nav);
+
     /*END MOBILE MENU*/
+    let a = 2;
+    let b = 4;
+    let c;
+
+    function doble(a, b) {
+
+        for (let i = 0; i < arguments.length; i++) {
+            arguments.length * 2;
+            return arguments[i];
+        }
+    }
+
+    console.log(doble(a, b));
+    doble(a, b);
+
+
 })();
 
 

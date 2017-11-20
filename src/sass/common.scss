@@ -1,12 +1,12 @@
 
 body {
-  font: 300 rem(17px)/1.64 "Helvetica Neue";
+  font: 300 rem(17px)/1.64 "Helvetica Neue",sans-serif;
   letter-spacing: 0.4px;
   background-color: #faf8f8;
 }
 
 .container {
-  max-width: rem(1180px);
+  max-width: rem(1200px);
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -17,8 +17,44 @@ body {
   text-align: center;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   color: #608b30;
-  font-family: "Bebas Neue Bold";
+  font-family: "Bebas Neue";
   font-size: rem(48px);
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.call {
+  color: #ffffff;
+  max-width: rem(210px);
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29);
+  background-color: #de3635;
+  background-image: linear-gradient(to top, rgba(176, 39, 39, 0.54) 0%, rgba(222, 54, 53, 0.54) 100%);
+  text-align: center;
+  padding: rem(10px) 0;
+  a {
+    width: 100%;
+    max-width: rem(170px);
+    font-size: rem(37px);
+    font-weight: 700;
+    line-height: 0.64;
+    text-transform: uppercase;
+    text-align: center;
+    span {
+      font-size: rem(26px);
+      display: block;
+    }
+  }
+}
+.hot_line {
+  text-shadow: 0 1px 1px rgba(1, 1, 1, 0.5);
+  font-size: rem(18px);
+  font-weight: 400;
+  line-height: 1.53;
+}
+.telephone {
+  font-size: rem(23px);
+  font-weight: 500;
+  line-height: 1.13;
+  display: block;
 }

@@ -16,10 +16,15 @@
       .basket {
         display: flex;
         align-items: center;
+        .icon-basket {
+         color: #ffffff;
+          font-size: rem(30px);
+          margin-right: rem(7px);
+        }
         .basket_item {
           p {
             font-size: rem(12px);
-            font-weight: 300;
+            font-weight: 400;
             color: #ffffff;
           }
         }
@@ -29,15 +34,16 @@
         margin-right: rem(30px);
 
         li {
-          padding: rem(5px) rem(4px);
+          width: rem(30px);
+          height: rem(30px);
           box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px #000000;
           margin-left: rem(9px);
           font-size: rem(18px);
           font-weight: 300;
           color: #ff3f3e;
-          text-transform: uppercase;
           background-color: #992524;
           cursor: pointer;
+          text-align: center;
           &:hover, &.active {
             color: #ffffff;
           }
@@ -49,13 +55,33 @@
         box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px #000000;
         height: rem(30px);
         border: none;
-        padding: rem(5px) rem(8px);
+        padding: rem(6px) 0 0 rem(5px);
         background-color: #992524;
+        color: #ffffff;
 
-        &::placeholder {
-          font-size: rem(20px);
+        &::-webkit-input-placeholder {
+          font-size: rem(24px);
           font-weight: 300;
           color: #ff3f3e;
+
+        }
+        &::-moz-placeholder {
+          font-size: rem(24px);
+          font-weight: 300;
+          color: #ff3f3e;
+
+          &:-moz-placeholder {
+            font-size: rem(24px);
+            font-weight: 300;
+            color: #ff3f3e;
+
+          }
+          &:-ms-input-placeholder {
+            font-size: rem(24px);
+            font-weight: 300;
+            color: #ff3f3e;
+
+          }
         }
       }
     }
@@ -144,9 +170,9 @@
       a {
         max-width: rem(152px);
         width: 100%;
-        color: #fefefe;
+        color: #ffffff;
         font-size: rem(14px);
-        font-weight: 300;
+        font-weight: 400;
         text-transform: uppercase;
         animation-name: text;
         animation-duration: 1.5s;
