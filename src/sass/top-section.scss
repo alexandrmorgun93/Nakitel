@@ -10,8 +10,10 @@
   background-image: radial-gradient(circle rem(500px), #b1eb76 0%, #4b791f 100%);
   .section {
     .container {
+      padding: 0 rem(10px);
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
       .left_elem {
         position: relative;
         max-width: rem(200px);
@@ -129,14 +131,12 @@
           text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
           color: #608b30;
           font-family: "Helvetica Neue";
-          font-size: 48px;
+          font-size: rem(48px);
           font-weight: 500;
           text-transform: uppercase;
         }
       }
       .right_elem {
-        position: relative;
-        left: rem(-10px);
         width: 100%;
         max-width: rem(220px);
         color: #ffffff;
