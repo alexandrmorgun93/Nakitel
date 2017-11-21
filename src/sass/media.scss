@@ -60,6 +60,15 @@
   /*content*/
   .content {
     .container {
+      .container_menu {
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(1, 1, 1, 0.6);
+        border: 7px solid #ffffff;
+        padding: 1.875rem;
+        background: linear-gradient(rgba(255, 255, 255, 0) 1.9em, rgba(0, 0, 0, 0.15) 2.4em) 0 0;
+        background-size: 2em 2em;
+        background-color: #ffffff;
+      }
       .right_aside {
         left: 0;
         flex-wrap: wrap;
