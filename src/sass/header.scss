@@ -4,21 +4,34 @@
   left: 0;
   z-index: 4;
   width: 100%;
-  box-shadow: 0 5px 5px rgba(16, 16, 15, 0.5);
+  -webkit-box-shadow: 0 5px 5px rgba(16, 16, 15, 0.5);
+          box-shadow: 0 5px 5px rgba(16, 16, 15, 0.5);
   background-color: #db3534;
   height: rem(45px);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   .container {
-   padding: rem(5px);
-    align-items: center;
+    padding: rem(5px);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     .header_right {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       .basket {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         .icon-basket {
-         color: #ffffff;
+          color: #ffffff;
           font-size: rem(30px);
           margin-right: rem(7px);
         }
@@ -31,13 +44,16 @@
         }
       }
       .language {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         margin-right: rem(30px);
 
         li {
           width: rem(30px);
           height: rem(30px);
-          box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px #000000;
+          -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px #000000;
+                  box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px #000000;
           margin-left: rem(9px);
           font-size: rem(18px);
           font-weight: 300;
@@ -53,12 +69,14 @@
 
       input {
         width: rem(270px);
-        box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px #000000;
+        -webkit-box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px #000000;
+                box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px #000000;
         height: rem(30px);
         border: none;
         padding: rem(6px) 0 0 rem(5px);
         background-color: #992524;
         color: #ffffff;
+        font-size: rem(24px);
 
         &::-webkit-input-placeholder {
           font-size: rem(24px);
@@ -91,10 +109,15 @@
 
 /*btn mobile*/
 .btn_mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
-  top:0;
+  top: 0;
   left: 0;
   cursor: pointer;
   .btn1 {
@@ -102,6 +125,7 @@
     height: 4px;
     background-color: #fff;
     margin: rem(3px) 0;
+    -webkit-transition: .4s;
     transition: .4s;
   }
   .btn2 {
@@ -109,6 +133,7 @@
     height: 4px;
     background-color: #fff;
     margin: rem(3px) 0;
+    -webkit-transition: .4s;
     transition: .4s;
   }
   .btn3 {
@@ -116,17 +141,20 @@
     height: 4px;
     background-color: #fff;
     margin: rem(3px) 0;
+    -webkit-transition: .4s;
     transition: .4s;
   }
   &.active {
     .btn1 {
-      transform: rotate(-411deg) translate(-15px, 1px);;
+      -webkit-transform: rotate(-411deg) translate(-15px, 1px);
+              transform: rotate(-411deg) translate(-15px, 1px);;
     }
     .btn2 {
       opacity: 0;
     }
     .btn3 {
-      transform: rotate(412deg) translate(-11px, 2px);
+      -webkit-transform: rotate(412deg) translate(-11px, 2px);
+              transform: rotate(412deg) translate(-11px, 2px);
 
     }
   }
@@ -143,12 +171,14 @@
   max-width: rem(210px);
   padding: rem(25px);
   visibility: hidden;
-  transition: .7s;
+  -webkit-transition: .1s;
+  transition: .1s;
 
   &.active {
     top: rem(65px);
     visibility: visible;
-    transition: .5s;
+    -webkit-transition: .4s;
+    transition: .4s;
   }
   &:before {
     position: absolute;
@@ -163,8 +193,13 @@
     opacity: 0.85;
   }
   ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     li {
       margin-top: rem(16px);
       &:first-child {
@@ -177,8 +212,10 @@
         font-size: rem(14px);
         font-weight: 400;
         text-transform: uppercase;
-        animation-name: text;
-        animation-duration: 1.5s;
+        -webkit-animation-name: text;
+                animation-name: text;
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s;
 
         &:hover {
           color: #cc0000;
@@ -190,5 +227,3 @@
   }
 
 }
-
-

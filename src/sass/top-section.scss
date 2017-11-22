@@ -6,23 +6,40 @@
   left: 0;
   z-index: 1;
   height: rem(512px);
-  box-shadow: inset -1px -2px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset -1px -2px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: inset -1px -2px 5px rgba(0, 0, 0, 0.5);
   background-image: radial-gradient(circle rem(500px), #b1eb76 0%, #4b791f 100%);
   .section {
     .container {
       padding: 0 rem(10px);
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
       .left_elem {
         position: relative;
         max-width: rem(200px);
         width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         .entrance {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          flex-direction: column;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
           margin-bottom: rem(10px);
           .entrance_elem1, .entrance_elem2 {
             color: #ffffff;
@@ -45,22 +62,39 @@
           max-width: rem(200px);
           width: 100%;
           margin-bottom: rem(10px);
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          justify-content: space-between;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
           a {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             text-align: center;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             width: rem(29px);
             height: rem(30px);
             color: #ffffff;
-            box-shadow: 0 1px 3px rgba(17, 17, 14, 0.5);
+            -webkit-box-shadow: 0 1px 3px rgba(17, 17, 14, 0.5);
+                    box-shadow: 0 1px 3px rgba(17, 17, 14, 0.5);
             border-radius: rem(3px);
+            -webkit-transition: .4s;
             transition: .4s;
             &:hover {
-              transform: scale(1.2);
+              -webkit-transform: scale(1.2);
+                      transform: scale(1.2);
+              -webkit-transition: .4s;
               transition: .4s;
             }
           }
@@ -68,7 +102,9 @@
             background-color: #44ccf6;
           }
           .icon-vk {
-            align-items: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             background-color: #1665a6;
             position: relative;
             &::before {
@@ -88,10 +124,16 @@
           }
         }
         .left_basket {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          align-items: center;
-          box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29);
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29);
+                  box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29);
           background-color: #de3635;
+          background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(176, 39, 39, 0.54)), to(rgba(222, 54, 53, 0.54)));
           background-image: linear-gradient(to top, rgba(176, 39, 39, 0.54) 0%, rgba(222, 54, 53, 0.54) 100%);
 
           .icon-basket {
@@ -119,9 +161,16 @@
         }
       }
       .logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         img {
           max-width: rem(95px);
           width: 100%;

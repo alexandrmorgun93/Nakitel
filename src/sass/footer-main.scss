@@ -4,9 +4,11 @@
   left: 0;
   width: 100%;
   height: rem(320px);
+  -webkit-box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.5);
   box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.5);
   background-image: radial-gradient(circle 320px at center, #b1eb76 0%, #4b791f 100%);
   margin-top: -8%;
+
   .footer_nav {
     position: absolute;
     left: 0;
@@ -14,15 +16,20 @@
     z-index: 1;
     width: 100%;
     height: rem(45px);
+    -webkit-box-shadow: 0 rem(1px) 0 rgba(255, 255, 255, 0.75), inset 0 2px 6px rgba(0, 0, 0, 0.75);
     box-shadow: 0 rem(1px) 0 rgba(255, 255, 255, 0.75), inset 0 2px 6px rgba(0, 0, 0, 0.75);
     background-color: #db3534;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     .container {
       padding: 0 rem(5px);
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
-      p {
 
+      p {
         font-size: rem(18px);
         font-weight: 400;
         line-height: 0.95;
@@ -30,22 +37,26 @@
       }
 
       ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+
         li {
           position: relative;
           margin-left: rem(45px);
+
           a {
             color: #ffffff;
             font-size: rem(18px);
             font-weight: 400;
             line-height: 0.95;
-            transition: .4s;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+
             &:hover {
               color: #4b791f;
             }
-
           }
-
         }
       }
     }

@@ -4,60 +4,73 @@
 
     /*variables*/
     /*BEGIN SLIDER*/
-    window.onload = function () {
-        autoSlider();
-    }
     let slider = document.querySelectorAll('.slider');
-    let dots = document.querySelectorAll('.dots');
-    let count = 0;
+    let dotsWrap = document.querySelector('.control_dot');
+    let arrDote =[];
+    let yak = 0;
+    let timer = null;
+    let interv =null;
 
-    let timer = setInterval(autoSlider, 5000);
-
-    function autoSlider() {
-        for (let i = 0; i < slider.length; i++) {
-            slider[i].classList.add('active');
-        }
-        count++;
-        if (count > slider.length) {
-            count = 1;
-        }
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slider[count - 1].classList.remove('active');
-        dots[count - 1].className += " active";
-
+    function lastElem (arr,int,boll){
+      if(boll){
+        return (arr[int+1])?int+1:0;
+      }else{
+        return (arr[int - 1])?int -1:arr.length-1;
+      }
     }
 
-    for (let i = 0; i < dots.length; i++) {
-        dots[i].addEventListener('click', function () {
-            dotsSlider();
-        });
+    for(let i =0; i<slider.length;i++){
+      let dots =document.createElement('i');
+      dots.className = 'dots';
+      dots.addEventListener('click',()=>{
+        clearInterval(timer);
+        autoSlider(true,i);
+        defult();
+      });
+      dotsWrap.appendChild(dots);
+    }
+    arrDote = dotsWrap.querySelectorAll('i');
+
+    function autoSlider(boll,int) {
+      for(let i =0; i < slider.length; i++){
+        slider[i].classList.remove('active');
+        arrDote[i].classList.remove('active');
+      }
+      if(arguments.length<2){
+        yak = lastElem(slider,yak,boll);
+        slider[yak].classList.add('active');
+        arrDote[yak].classList.add('active');
+      }
+      else{
+        yak = int;
+        slider[int].classList.add('active');
+        arrDote[int].classList.add('active');
+      }
     }
 
-    function dotsSlider(n) {
-        if (n > slider.length) {
-            count = 1
-        }
-        if (n < 1) {
-            count = slider.length
-        }
-        for (let i = 0; i < slider.length; i++) {
-            slider[i].classList.add('active');
-        }
-        for (let i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slider[count - 1].classList.remove('active');
-        dots[count - 1].className += " active";
+
+    function defult(){
+      timer = setInterval(()=>{
+        autoSlider(true);
+      }, 5000);
     }
+
+    slider[0].classList.add('active');
+    arrDote[0].classList.add('active');
+
+    defult();
+
+
+
+
 
     /* document.addEventListener('click', function () {
-        ) for (let i = 0; i < dots.length; i++ {
+         for (let i = 0; i < dots.length; i++) {
              count++;
              clearInterval(timer);
          }
-     })*/
+     });*/
+
 
     /*END SLIDER*/
     /*BEGIN MOBILE MENU*/
@@ -74,20 +87,6 @@
     menuNav(btn, nav);
 
     /*END MOBILE MENU*/
-    let a = 2;
-    let b = 4;
-    let c;
-
-    function doble(a, b) {
-
-        for (let i = 0; i < arguments.length; i++) {
-            arguments.length * 2;
-            return arguments[i];
-        }
-    }
-
-    console.log(doble(a, b));
-    doble(a, b);
 
 
 })();
